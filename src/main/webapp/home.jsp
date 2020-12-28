@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>데모 게시</title>
+<title>데모 게시판 </title>
 </head>
 <body>
 게시판 

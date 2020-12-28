@@ -9,7 +9,6 @@ public class HomeController {
 
 	
 	@RequestMapping("home")
-	@ResponseBody
 	public String home() {
 //		System.out.println("hi");
 		return "home.jsp";
