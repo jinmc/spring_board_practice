@@ -15,4 +15,11 @@ public class HomeController {
 		
 	}
 	
+	@RequestMapping("home2")
+	public String home2() {
+//		System.out.println("hi");
+		return "home2.jsp";
+		
+	}
+	
 }
