@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
 	
-	@RequestMapping("home")
+	@RequestMapping(value={"/", "/home"})
 	public String home() {
 //		System.out.println("hi");
 		return "home";
-		
 	}
 	
 	@RequestMapping("home2")
