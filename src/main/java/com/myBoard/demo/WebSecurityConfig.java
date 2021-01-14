@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/css/**", "/vendor/**", "/js/**", "/images/**");
+		web.ignoring().antMatchers("/css/**", "/vendor/**", "/js/**", "/images/**", "/h2-console/**");
 	}
 	
 	
@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder getPasswordEncoder1() {
         return NoOpPasswordEncoder.getInstance();
-    }	
+    }		
 	
     
     // other way to bypass encryption of password
