@@ -1,3 +1,8 @@
-Insert into User values (1, 1234, 'admin', 'Faker'); 
-Insert into User values (2, 1234, 'admin', 'Chovy');
-Insert into User values (3, 1234, 'admin', 'Madlife');
+INSERT INTO USER (ID, ACTIVE, PASSWORD, PASSWORD_CONFIRM, ROLE, USER_NAME)
+VALUES (1, true, 1234, 1234, 'admin', 'faker');
+
+INSERT INTO USER (ID, ACTIVE, PASSWORD, PASSWORD_CONFIRM, ROLE, USER_NAME)
+VALUES (2, true, 1234, 1234, 'admin', 'madlife');
+
+INSERT INTO USER (ID, ACTIVE, PASSWORD, PASSWORD_CONFIRM, ROLE, USER_NAME)
+VALUES (3, true, 1234, 1234, 'admin', 'showmaker');
