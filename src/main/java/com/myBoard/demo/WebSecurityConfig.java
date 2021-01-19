@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	// In production we should encrypt the password
 	// but as this is practice, we will just pass by
     @Bean
-    public PasswordEncoder getPasswordEncoder1() {
+    public PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }		
 	

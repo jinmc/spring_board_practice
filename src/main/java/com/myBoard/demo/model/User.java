@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User {
     private Long id;
-    private String username;
+    private String userName;
     private String password;
     private String passwordConfirm;
     private String role;
@@ -23,11 +23,11 @@ public class User {
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public String getPassword() {
