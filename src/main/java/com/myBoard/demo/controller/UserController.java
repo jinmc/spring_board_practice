@@ -1,11 +1,22 @@
 package com.myBoard.demo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.myBoard.demo.model.User;
+import com.myBoard.demo.model.UserRepository;
 
 @Controller
 public class UserController {
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@GetMapping("login")
 	public String login() {
@@ -20,10 +31,26 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping("register")
-	public String register() {
-//		System.out.println("hi");
-		return "register";
+	@GetMapping("registerForm")
+	public String showRegister() {
+		return "registerForm";
+	}
+	
+//    @RequestMapping(value = "/register", method = RequestMethod.GET)
+//    public String showRegisterPage() {
+//        return "register";
+//    }
+	
+//	@GetMapping("register")
+	@RequestMapping(value="register", method= RequestMethod.POST)
+	public String register(User user) {
+		System.out.println(user);
+		user.setRole("admin");
+		user.setActive(true);
+		
+//		userRepository.save(user);
+		System.out.println("hi");
+		return "/home";
 		
 	}
 

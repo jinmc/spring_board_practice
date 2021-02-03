@@ -40,11 +40,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 				.authorizeRequests()
 				.antMatchers("/home", "/").permitAll()
+				.antMatchers("/registerForm", "/register").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()
-				.loginPage("/login")
-				.permitAll();
+				.loginPage("/login").permitAll();
 	}
 	
 	// spring security expects this function!
