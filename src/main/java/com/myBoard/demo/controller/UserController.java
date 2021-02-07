@@ -48,7 +48,7 @@ public class UserController {
 		user.setRole("admin");
 		user.setActive(true);
 		
-//		userRepository.save(user);
+		userRepository.save(user);
 		System.out.println("hi");
 		return "/home";
 		
