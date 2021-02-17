@@ -1,26 +1,24 @@
 package com.myBoard.demo.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "post")
-public class Board {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int userId;
+    private String userName;
     private String title;
     private String content;
     private int count;
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+
+	
 	public String getTitle() {
 		return title;
 	}
@@ -38,6 +36,12 @@ public class Board {
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
     
 
