@@ -31,9 +31,10 @@ public class UserController {
 		
 	}
 	
-	@GetMapping("registerForm")
+	@GetMapping("register")
 	public String showRegister() {
-		return "registerForm";
+		System.out.println("showing register");
+		return "register";
 	}
 	
 //    @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -42,7 +43,8 @@ public class UserController {
 //    }
 	
 //	@GetMapping("register")
-	@RequestMapping(value="register", method= RequestMethod.POST)
+	@PostMapping("register")
+//	@RequestMapping(value="register", method= RequestMethod.POST)
 	public String register(User user) {
 		System.out.println(user);
 		user.setRole("admin");
@@ -50,7 +52,7 @@ public class UserController {
 		
 		userRepository.save(user);
 		System.out.println("hi");
-		return "/home";
+		return "/login";
 		
 	}
 
