@@ -304,60 +304,13 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">자유 게시판</h1>
-                    <p class="mb-4">자유롭게 의견을 표현하는 게시판 입니다. </p>
-
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">게시판 예시 </h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>글쓴이 </th>
-                                            <th style="width: 50%">제목 </th>
-                                            <th>추천수 </th>
-                                            <th>날짜</th>
-                                            <th>조회수 </th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>글쓴이 </th>
-                                            <th>제목 </th>
-                                            <th>추천수 </th>
-                                            <th>날짜</th>
-                                            <th>조회수 </th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>매드라이프 </td>
-                                            <td><a href="">안녕하세요 가입인사 남깁니다. </a></td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>200</td>
-                                        </tr>
-                                        <tr>
-                                            <td>페이커 </td>
-                                            <td><a href="">롤 배우실 분 찾습니다. </a></td>
-                                            <td>63</td>
-                                            <td>2013/04/25</td>
-                                            <td>200</td>
-                                        </tr>
-                                   </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-					<a href="editform" class="btn btn-primary">글쓰기</a>
+                    <form th:action="@{/savePost}" method="post">
+						<div class="form-group"><label for="">제목 </label><textarea class="form-control form-control-solid" type="text" name="title" rows="1"></textarea></div>
+						<div class="form-group"><label for="">내용 </label><textarea class="form-control form-control-solid" id="content" rows="20"></textarea></div>
+						<input class="btn btn-primary" type="submit" value="저장 ">
+					</form>
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
 
@@ -422,3 +375,6 @@
 </body>
 
 </html>
+
+
+
