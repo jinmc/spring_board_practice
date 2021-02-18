@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.myBoard.demo.model.MyUserDetails;
@@ -23,7 +24,8 @@ public class PostController {
 	}
 	
 	
-	@RequestMapping("savePost")
+	
+	@PostMapping("savePost")
 	String savePost(Post post) {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); 
 		MyUserDetails userDetails = (MyUserDetails) principal; 
@@ -34,12 +36,10 @@ public class PostController {
 		post.setUserName(username);
 		postRepository.save(post);
 		
-		
-
 //		출처: https://itstory.tk/entry/Spring-Security-현재-로그인한-사용자-정보-가져오기 [덕's IT Story]
 //		CustomUser customUser = (CustomUser)authentication.getPrincipal();
 //		int userId = customUser.getUserId();
-		return "home";
+		return "redirect:/home";
 	}
 
 }

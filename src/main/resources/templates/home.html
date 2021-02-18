@@ -331,7 +331,11 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-										<tr></tr>
+										<tr th:each="post : ${posts}">
+											<td th:text="${post.userName}"></td>
+											<td th:text="${post.title}"></td>
+											<td th:text="${post.count}"></td>
+										</tr>
                                    </tbody>
                                 </table>
                             </div>
