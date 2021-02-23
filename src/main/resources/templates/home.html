@@ -333,7 +333,7 @@
                                     <tbody>
 										<tr th:each="post : ${posts}">
 											<td th:text="${post.userName}"></td>
-											<td><a th:href="@{~/post/${post.id}}" th:text="${post.title}"></a></td>
+											<td><a th:href="@{~/post/(id=${post.id})}" th:text="${post.title}"></a></td>
 											<td th:text="${post.count}"></td>
 										</tr>
                                    </tbody>
