@@ -18,7 +18,10 @@ public class Post {
     private String content;
     private int count;
 
-	
+    public Long getId() {
+    	return id;
+    }
+    
 	public String getTitle() {
 		return title;
 	}
